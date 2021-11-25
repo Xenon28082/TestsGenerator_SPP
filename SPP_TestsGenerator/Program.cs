@@ -41,7 +41,7 @@ namespace SPP_TestsGenerator
             int maxFiles = max;
             var paths = new List<string>();
 
-            for (int i = 1; i < pathes.Length; i++)
+            for (int i = 0; i < pathes.Length; i++)
             {
                 paths.Add(pathes[i]);
             }
@@ -55,7 +55,7 @@ namespace SPP_TestsGenerator
         }
         static void Main(string[] args)
         {
-            string[] pathes = {"", "C:\\Users\\savva\\RiderProjects\\SPP\\TestDLL\\TestDLL\\Program.cs", "C:\\Users\\savva\\RiderProjects\\SPP\\TracerSPP\\ConsoleApp1\\TracerResources\\Tracer.cs"};
+            string[] pathes = {"C:\\Users\\savva\\RiderProjects\\SPP\\TestDLL\\TestDLL\\Program.cs", "C:\\Users\\savva\\RiderProjects\\SPP\\TracerSPP\\ConsoleApp1\\TracerResources\\Tracer.cs"};
             IEnumerable<IEnumerable<PipeFrame>> inputs = CreateFrames(pathes, 2);
             List<ActionBlock<PipeFrame[]>> waits = new List<ActionBlock<PipeFrame[]>>();
 
